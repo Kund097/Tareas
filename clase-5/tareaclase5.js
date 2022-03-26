@@ -34,6 +34,5 @@ $ingreso.onclick = function(){
     document.querySelector(".texto-apellido").innerText = apellidoUsuario;
     document.querySelector(".texto-edad").innerText = edad;
     document.querySelector("h1").innerText = `${saludoUsuario}!`;
-   
     return false;
 }
