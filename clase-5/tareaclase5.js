@@ -16,23 +16,24 @@ Ejemplo form:
   <div id="resultado">Hola</div>
 *
 * */
-let primerNombre = `Nombre: `;
-let segundoNombre = `Segundo Nombre: `;
-let apellidoUsuario = `Apellido/s: `;
-let edad = `Edad: `;
-let saludoUsuario = `Bienvenido `;
-const BOTON_INGRESO = document.querySelector(`#ingresar`);
-BOTON_INGRESO.onclick = function(){
-    saludoUsuario += document.querySelector(`#primernombre`).value;
-    primerNombre += document.querySelector(`#primernombre`).value;
-    segundoNombre += document.querySelector(`#segundonombre`).value;
-    apellidoUsuario += document.querySelector(`#apellido`).value;
-    edad += document.querySelector(`#edadusuario`).value;
-    document.querySelector(`#datosUsuario1`).innerText = primerNombre;
-    document.querySelector(`#datosUsuario2`).innerText = segundoNombre;
-    document.querySelector(`#datosUsuario3`).innerText = apellidoUsuario;
-    document.querySelector(`#datosUsuario4`).innerText = edad;
-    document.querySelector(`h1`).innerText = `${saludoUsuario}!`;
-    
+
+const $ingreso = document.querySelector("#ingresar");
+$ingreso.onclick = function(){
+  let primerNombre = "Nombre: ";
+  let segundoNombre = "Segundo Nombre: ";
+  let apellidoUsuario = "Apellido/s: ";
+  let edad = "Edad: ";
+  let saludoUsuario = "Bienvenido ";
+    saludoUsuario += document.querySelector("#primer-nombre").value;
+    primerNombre += document.querySelector("#primer-nombre").value;
+    segundoNombre += document.querySelector("#segundo-nombre").value;
+    apellidoUsuario += document.querySelector("#apellido").value;
+    edad += document.querySelector("#edad-usuario").value;
+    document.querySelector(".texto-primer-nombre").innerText = primerNombre;
+    document.querySelector(".texto-segundo-nombre").innerText = segundoNombre;
+    document.querySelector(".texto-apellido").innerText = apellidoUsuario;
+    document.querySelector(".texto-edad").innerText = edad;
+    document.querySelector("h1").innerText = `${saludoUsuario}!`;
+   
     return false;
 }
