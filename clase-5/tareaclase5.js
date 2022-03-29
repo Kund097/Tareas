@@ -16,7 +16,9 @@ Ejemplo form:
   <div id="resultado">Hola</div>
 *
 * */
-
+let colorDeFondo = document.querySelector("body");
+colorDeFondo.style.backgroundColor = ("blue");
+colorDeFondo.style.fontSize = ("50px");
 const $ingreso = document.querySelector("#ingresar");
 $ingreso.onclick = function(){
   let primerNombre = "Nombre: ";
@@ -29,10 +31,10 @@ $ingreso.onclick = function(){
     segundoNombre += document.querySelector("#segundo-nombre").value;
     apellidoUsuario += document.querySelector("#apellido").value;
     edad += document.querySelector("#edad-usuario").value;
-    document.querySelector(".texto-primer-nombre").innerText = primerNombre;
-    document.querySelector(".texto-segundo-nombre").innerText = segundoNombre;
-    document.querySelector(".texto-apellido").innerText = apellidoUsuario;
-    document.querySelector(".texto-edad").innerText = edad;
-    document.querySelector("h1").innerText = `${saludoUsuario}!`;
+    document.querySelector(".texto-primer-nombre").textContent = primerNombre;
+    document.querySelector(".texto-segundo-nombre").textContent = segundoNombre;
+    document.querySelector(".texto-apellido").textContent = apellidoUsuario;
+    document.querySelector(".texto-edad").textContent = edad;
+    document.querySelector("h1").textContent = `${saludoUsuario}!`;
     return false;
 }
